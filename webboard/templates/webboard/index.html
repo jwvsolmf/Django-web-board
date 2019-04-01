@@ -1,0 +1,13 @@
+{% extends "layout/basic.html" %}
+
+{% block content %}
+{% for bb in bbs %}
+<div class="b">
+    <h3>{{ bb.title }}</h3>
+    <p>Рубрика: <a href="/{{ bb.rubric.pk }}">{{ bb.rubric.name }}</a></p>
+    <p>Описание: {{ bb.content }}</p>
+    <p>Цена: {{ bb.price }} лев.</p>
+    <p>Опубликовано: {{ bb.published|date:"d.m.Y H:i:s" }}</p>
+</div>
+{% endfor %}
+{% endblock %}

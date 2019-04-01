@@ -26,8 +26,8 @@ SECRET_KEY = 'o_)6k_$g_w@%d2)7rlu@&)93)eh)59vnv+5e-$79@=2e3rdev0'
 DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.0.12',
-		 'srv00.hldns.ru',
-		]
+                'srv00.hldns.ru',
+                ]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'webboard.apps.WebboardConfig',
 ]
 
 MIDDLEWARE = [
@@ -105,9 +106,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Sofia'
 
 USE_I18N = True
 
@@ -120,3 +123,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
